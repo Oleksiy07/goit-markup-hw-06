@@ -551,17 +551,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .form {
-    display: flex;
     margin-left: 93px;
     margin-top: 12px;
 }
 
 .form .form-field{
     display: flex;
-    flex-direction: column;
 }
 
 .form label {
+    display: block;
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -597,8 +596,8 @@ h1, h2, h3, h4, h5, h6, p {
     width: 200px;
     height: 50px;
     padding: 0;
-    margin-top: 36px;
     margin-left: 12px;
+    cursor: pointer;
     
     font-weight: 700;
     font-size: 16px;
@@ -650,8 +649,8 @@ h1, h2, h3, h4, h5, h6, p {
     top: 50%;
     left: 50%;
 
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
     padding: 40px;
 
     background-color: #fff;
@@ -678,6 +677,8 @@ h1, h2, h3, h4, h5, h6, p {
 
     min-width: 30px;
     min-height: 30px;
+    cursor: pointer;
+
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -696,9 +697,10 @@ h1, h2, h3, h4, h5, h6, p {
     fill: inherit;
 }
 
-.modal .title {
+.modal .text {
     margin-bottom: 12px;
-
+    
+    font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
@@ -720,6 +722,7 @@ h1, h2, h3, h4, h5, h6, p {
 .modal-form label {
     margin-bottom: 4px;
     font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.01em;
 }
 
@@ -733,6 +736,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .modal-form input:focus {
+    outline: none;
     border-color: var(--accent-color);
 }
 
@@ -765,6 +769,11 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 0.01em;
 
     color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 .modal-form a {
